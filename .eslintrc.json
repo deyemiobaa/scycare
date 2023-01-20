@@ -17,13 +17,18 @@
 		"project": ["./tsconfig.json"]
 	},
 	"plugins": ["react", "tailwindcss"],
-	"rules": {},
+	"rules": {
+		"tailwindcss/classnames-order": "warn",
+		"tailwindcss/no-custom-classname": "off"
+	},
 	"settings": {
 		"react": {
 			"version": "detect"
 		},
 		"tailwindcss": {
-			"callees": ["cn"]
+			"enabled": false,
+			"callees": ["cn"],
+			"config": "tailwind.config.cjs"
 		}
 	}
 }
