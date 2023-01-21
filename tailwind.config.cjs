@@ -32,8 +32,8 @@ module.exports = {
 			},
 			backgroundColor: {
 				button: {
-					hover: "linear-gradient(0deg, #0088A2, #0088A2), #092C4C;",
-					active: "linear-gradient(0deg, #0088A2, #0088A2), #092C4C;",
+					hover: "#0088A2",
+					active: "#092C4C",
 					disabled: "#E0E6E8",
 					default: "#00C2E7",
 				},
