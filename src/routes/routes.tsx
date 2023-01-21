@@ -4,6 +4,7 @@ import {
 	Route,
 	createRoutesFromElements,
 } from "react-router-dom"
+import Layout from "../components/Layout"
 import Index from "../pages/Index"
 import PayForRequest from "../pages/PayForRequest"
 import TrackLabTest from "../pages/TrackLabTest"
@@ -14,7 +15,11 @@ const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route
 			path="/"
-			element={<Index />}>
+			element={<Layout />}>
+			<Route
+				index
+				element={<Index />}
+			/>
 			<Route
 				path="/tracking"
 				element={<TrackLabTest />}

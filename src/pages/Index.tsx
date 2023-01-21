@@ -1,8 +1,10 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 import { cn } from "../utils"
 import Button from "../components/Button"
 
 export default function Index(): JSX.Element {
+	const navigate = useNavigate()
 	return (
 		<div className={cn("h-screen bg-home bg-cover bg-center")}>
 			<div
@@ -18,6 +20,9 @@ export default function Index(): JSX.Element {
 				<Button
 					text="Get Started"
 					type="button"
+					onClick={() => {
+						navigate("/upload")
+					}}
 				/>
 			</div>
 		</div>
