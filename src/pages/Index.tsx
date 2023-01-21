@@ -11,6 +11,11 @@ export default function Index(): JSX.Element {
 				className={cn(
 					"flex h-full flex-col items-center justify-center gap-4 bg-primary/[.85] px-5"
 				)}>
+				<img
+					src="/favicon.svg"
+					alt="logo"
+					className={cn("h-11")}
+				/>
 				<h1 className={cn("text-center font-hellix text-4xl text-secondary")}>
 					Welcome to Scycare
 				</h1>

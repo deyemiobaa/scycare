@@ -40,6 +40,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				home: "url('/assets/images/home_bg.png')",
+				header: "url('/assets/images/header_bg.png')",
 			},
 			fontFamily: {
 				hellix: ["Hellix", "sans-serif"],
