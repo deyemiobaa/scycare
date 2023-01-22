@@ -22,7 +22,7 @@ module.exports = {
 					two: "#E0F6FC",
 					three: "#FFE7E2",
 				},
-				grey: {
+				gray: {
 					one: "#595D6E",
 					two: "#656973",
 					three: "#828282",
@@ -37,6 +37,7 @@ module.exports = {
 					disabled: "#E0E6E8",
 					default: "#00C2E7",
 				},
+				form: "rgba(101, 105, 115, 0.06)",
 			},
 			backgroundImage: {
 				home: "url('/assets/images/home_bg.png')",
