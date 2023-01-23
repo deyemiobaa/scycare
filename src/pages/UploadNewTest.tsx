@@ -1,32 +1,27 @@
 import React from "react"
 import Header from "../components/Header"
-import { cn } from "../utils"
 import { Link } from "react-router-dom"
+import { AiOutlineCamera } from "react-icons/ai"
 
 export default function UploadNewTest(): JSX.Element {
 	return (
-		<div className={cn("bg-white")}>
+		<div className="bg-white">
 			<Header />
-			<form className={cn("px-5")}>
-				<div className={cn("mb-3 flex items-center justify-between")}>
-					<h1 className={cn("text-xl font-bold capitalize text-secondary")}>
+			<form
+				noValidate
+				className="px-5">
+				<div className="mb-5 flex items-center justify-between">
+					<h1 className="text-xl font-bold capitalize text-secondary">
 						Book new lab test
 					</h1>
 					<Link
 						to="/tracking"
-						className={cn("text-sm text-primary underline")}>
+						className="text-sm text-primary underline">
 						Track your test &gt;
 					</Link>
 				</div>
-
-				<div
-					className={cn(
-						"flex flex-wrap justify-between rounded bg-gray-50 p-5 text-gray-one"
-					)}>
-					<h2
-						className={cn(
-							"grow basis-full border-b border-gray-one/25 pb-3 text-lg font-bold capitalize text-secondary"
-						)}>
+				<div className="flex flex-wrap justify-between rounded bg-gray-50 p-5 text-gray-one">
+					<h2 className="grow basis-full border-b border-gray-one/25 pb-3 text-lg font-bold capitalize text-secondary">
 						Your Details
 					</h2>
 					<div className="relative mt-6 grow">
@@ -35,64 +30,65 @@ export default function UploadNewTest(): JSX.Element {
 							name="full name"
 							id="fullName"
 							placeholder="Full name"
-							className={cn(
-								"peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none"
-							)}
+							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 							autoComplete="off"
+							required
+							pattern="^[a-zA-Z ]+$"
 						/>
 						<label
 							htmlFor="fullName"
-							className={cn(
-								"pointer-events-none absolute top-0 left-0 ml-3 origin-left -translate-y-1/2 bg-gray-50 px-1 text-sm text-gray-500 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:ml-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-medium peer-placeholder-shown:text-gray-two/60 peer-focus:-top-0 peer-focus:ml-3 peer-focus:text-sm peer-focus:text-gray-one"
-							)}>
+							className="pointer-events-none absolute top-0 left-0 ml-3 origin-left -translate-y-1/2 bg-gray-50 px-1 text-sm text-gray-500 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:ml-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-medium peer-placeholder-shown:text-gray-two/60 peer-focus:-top-0 peer-focus:ml-3 peer-focus:text-sm peer-focus:text-gray-one">
 							Full name
 						</label>
+						<span className="mt-2 hidden text-sm text-red-400">
+							Please enter your full name.
+						</span>
 					</div>
 					<div className="relative mt-6 grow">
 						<input
-							type="text"
+							type="tel"
 							name="Mobile number"
 							id="MobileNumber"
 							placeholder="Mobile number"
-							className={cn(
-								"peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none"
-							)}
+							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
+							required
+							pattern="^[0-9]{11}$"
 						/>
 						<label
 							htmlFor="MobileNumber"
-							className={cn(
-								"pointer-events-none absolute top-0 left-0 ml-3 origin-left -translate-y-1/2 bg-gray-50 px-1 text-sm text-gray-500 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:ml-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-medium peer-placeholder-shown:text-gray-two/60 peer-focus:-top-0 peer-focus:ml-3 peer-focus:text-sm peer-focus:text-gray-one"
-							)}>
+							className="pointer-events-none absolute top-0 left-0 ml-3 origin-left -translate-y-1/2 bg-gray-50 px-1 text-sm text-gray-500 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:ml-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-medium peer-placeholder-shown:text-gray-two/60 peer-focus:-top-0 peer-focus:ml-3 peer-focus:text-sm peer-focus:text-gray-one">
 							Mobile number
 						</label>
+						<span className="mt-2 hidden text-sm text-red-400">
+							Please enter a valid phone number.
+						</span>
 					</div>
 					<div className="relative mt-6 basis-[45%]">
 						<input
-							type="text"
+							type="number"
 							name="age"
 							id="age"
 							placeholder="Age"
-							className={cn(
-								"peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none"
-							)}
+							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 						/>
 						<label
 							htmlFor="age"
-							className={cn(
-								"pointer-events-none absolute top-0 left-0 ml-3 origin-left -translate-y-1/2 bg-gray-50 px-1 text-sm text-gray-500 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:ml-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-medium peer-placeholder-shown:text-gray-two/60 peer-focus:-top-0 peer-focus:ml-3 peer-focus:text-sm peer-focus:text-gray-one"
-							)}>
+							className="pointer-events-none absolute top-0 left-0 ml-3 origin-left -translate-y-1/2 bg-gray-50 px-1 text-sm text-gray-500 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:ml-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-medium peer-placeholder-shown:text-gray-two/60 peer-focus:-top-0 peer-focus:ml-3 peer-focus:text-sm peer-focus:text-gray-one">
 							Age
 						</label>
+						<span className="mt-2 hidden text-sm text-red-400">
+							Please enter your age.
+						</span>
 					</div>
 
 					<div className="mt-6 basis-[45%]">
 						<select
-							className={cn(
-								"w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 focus:border-gray-one focus:outline-none"
-							)}
-							aria-label="Default select example">
+							className="w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
+							defaultValue="Gender"
+							aria-label="Default select example"
+							required>
 							<option
-								selected
+								value="Gender"
 								disabled>
 								Gender
 							</option>
@@ -100,6 +96,34 @@ export default function UploadNewTest(): JSX.Element {
 							<option value="Female">Female</option>
 							<option value="Prefer not to say">Prefer not to say</option>
 						</select>
+						<span className="mt-2 hidden text-sm text-red-400">
+							Please select a gender.
+						</span>
+					</div>
+				</div>
+
+				<div className="mt-10 flex flex-wrap justify-between rounded bg-gray-50 p-5 text-gray-one">
+					<h2 className="grow basis-full border-b border-gray-one/25 pb-3 text-lg font-bold capitalize text-secondary">
+						Your Test Details
+					</h2>
+					<div className="mb-6">
+						<div className="my-4 flex items-center gap-3">
+							<AiOutlineCamera />
+							<label
+								htmlFor="form"
+								className="text-sm text-gray-600">
+								Upload your lab request form
+							</label>
+						</div>
+						<div className=""></div>
+						<input
+							type="file"
+							name="Upload Form"
+							id="form"
+						/>
+						<span className="mt-2 hidden text-sm text-red-400">
+							Password must be atleast six characters.{" "}
+						</span>
 					</div>
 				</div>
 			</form>
