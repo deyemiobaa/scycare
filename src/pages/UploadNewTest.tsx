@@ -115,14 +115,23 @@ export default function UploadNewTest(): JSX.Element {
 								Upload your lab request form
 							</label>
 						</div>
-						<div className=""></div>
-						<input
+						<div className="flex flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4">
+							<img
+								src="/assets/icons/file_upload.png"
+								alt="upload file"
+							/>
+							<p className="text-xs font-semibold text-secondary">
+								Click here to upload your lab request form
+							</p>
+							<p className="text-xs">PNG, JPG, or PDF</p>
+						</div>
+						{/* <input
 							type="file"
 							name="Upload Form"
 							id="form"
-						/>
+						/> */}
 						<span className="mt-2 hidden text-sm text-red-400">
-							Password must be atleast six characters.{" "}
+							Please upload an image or pdf file of lab tests
 						</span>
 					</div>
 				</div>
