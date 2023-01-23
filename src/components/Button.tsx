@@ -8,7 +8,7 @@ export default function Button(props: Props): JSX.Element {
 			type={type}
 			onClick={onClick}
 			className={cn(
-				"text-normal w-96 rounded bg-button-default py-4 text-white hover:bg-button-hover active:bg-button-active"
+				"text-normal w-full max-w-sm rounded bg-button-default py-4 text-white hover:bg-button-hover active:bg-button-active"
 			)}>
 			{text}
 		</button>
