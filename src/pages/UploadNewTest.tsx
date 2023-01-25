@@ -2,6 +2,8 @@ import React from "react"
 import Header from "../components/Header"
 import { Link } from "react-router-dom"
 import { AiOutlineCamera } from "react-icons/ai"
+import { TfiAngleRight, TfiLocationPin } from "react-icons/tfi"
+import Button from "../components/Button"
 
 export default function UploadNewTest(): JSX.Element {
 	return (
@@ -94,7 +96,6 @@ export default function UploadNewTest(): JSX.Element {
 							</option>
 							<option value="Male">Male</option>
 							<option value="Female">Female</option>
-							<option value="Prefer not to say">Prefer not to say</option>
 						</select>
 						<span className="mt-2 hidden text-sm text-red-400">
 							Please select a gender.
@@ -134,6 +135,47 @@ export default function UploadNewTest(): JSX.Element {
 							Please upload an image or pdf file of lab tests
 						</span>
 					</div>
+
+					<span className="my-4 text-sm font-semibold capitalize">
+						OR Select your lab tests here
+					</span>
+
+					<div className="mt-6 flex items-center gap-6 rounded bg-white p-2 shadow-min">
+						<img
+							src="/assets/icons/microscope.png"
+							alt="microscope"
+						/>
+						<div className="grow">
+							<p className="text-sm font-semibold capitalize">
+								Select your lab test
+							</p>
+							<p className="text-xs">Sugar test, BP test &amp; 15+ tests</p>
+						</div>
+						<img
+							src="/assets/icons/plus.png"
+							alt="plus"
+						/>
+					</div>
+				</div>
+
+				<div className="mt-10 rounded bg-gray-50 p-5 text-gray-one">
+					<h2 className="border-b border-gray-one/25 pb-3 text-lg font-bold capitalize text-secondary">
+						Your address for sample collection
+					</h2>
+					<div className="mt-6 flex items-center gap-2 rounded bg-white p-3 shadow-min">
+						<TfiLocationPin size={20} />
+						<p className="grow text-xs font-semibold capitalize">
+							choose your lab sample pickup address
+						</p>
+						<TfiAngleRight size={20} />
+					</div>
+				</div>
+
+				<div className="py-10">
+					<Button
+						type="submit"
+						text="Send Request"
+					/>
 				</div>
 			</form>
 		</div>

@@ -47,6 +47,9 @@ module.exports = {
 			fontFamily: {
 				hellix: ["Hellix", "sans-serif"],
 			},
+			boxShadow: {
+				min: "0px 0px 10px rgba(0, 0, 0, 0.08)",
+			},
 		},
 	},
 	plugins: [],
