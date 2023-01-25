@@ -102,8 +102,8 @@ export default function UploadNewTest(): JSX.Element {
 					</div>
 				</div>
 
-				<div className="mt-10 flex flex-wrap justify-between rounded bg-gray-50 p-5 text-gray-one">
-					<h2 className="grow basis-full border-b border-gray-one/25 pb-3 text-lg font-bold capitalize text-secondary">
+				<div className="mt-10 rounded bg-gray-50 p-5 text-gray-one">
+					<h2 className="border-b border-gray-one/25 pb-3 text-lg font-bold capitalize text-secondary">
 						Your Test Details
 					</h2>
 					<div className="mb-6">
@@ -115,7 +115,7 @@ export default function UploadNewTest(): JSX.Element {
 								Upload your lab request form
 							</label>
 						</div>
-						<div className="flex flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4">
+						<div className="flex w-full flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4">
 							<img
 								src="/assets/icons/file_upload.png"
 								alt="upload file"
