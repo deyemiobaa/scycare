@@ -32,7 +32,7 @@ export default function UploadNewTest(): JSX.Element {
 							name="full name"
 							id="fullName"
 							placeholder="Full name"
-							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
+							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 							autoComplete="off"
 							required
 							pattern="^[a-zA-Z ]+$"
@@ -52,7 +52,7 @@ export default function UploadNewTest(): JSX.Element {
 							name="Mobile number"
 							id="MobileNumber"
 							placeholder="Mobile number"
-							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
+							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 							required
 							pattern="^[0-9]{11}$"
 						/>
@@ -71,7 +71,7 @@ export default function UploadNewTest(): JSX.Element {
 							name="age"
 							id="age"
 							placeholder="Age"
-							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
+							className="peer w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 placeholder:text-transparent focus:border-gray-one focus:outline-none [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 						/>
 						<label
 							htmlFor="age"
@@ -85,7 +85,7 @@ export default function UploadNewTest(): JSX.Element {
 
 					<div className="mt-6 basis-[45%]">
 						<select
-							className="w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 focus:border-gray-one focus:outline-none valid:[&:not(:placeholder-shown)]:border-green-500 [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
+							className="w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 focus:border-gray-one focus:outline-none  [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 							defaultValue="Gender"
 							aria-label="Default select example"
 							required>
