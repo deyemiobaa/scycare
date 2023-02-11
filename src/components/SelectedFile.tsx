@@ -6,10 +6,11 @@ interface Props {
 	fileName: string
 	fileSize: string
 	date: string
+	handleClick: (values: boolean) => void
 }
 
 export default function SelectedFile(props: Props): JSX.Element {
-	const { fileName, fileSize, date } = props
+	const { fileName, fileSize, date, handleClick } = props
 	return (
 		<div className="mb-6">
 			<div className="my-4 flex items-center gap-2">
@@ -36,7 +37,10 @@ export default function SelectedFile(props: Props): JSX.Element {
 				<button
 					type="button"
 					className="ml-auto"
-					title="remove file">
+					title="remove file"
+					onClick={() => {
+						handleClick(false)
+					}}>
 					<VscTrash />
 				</button>
 			</div>

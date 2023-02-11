@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import Header from "../components/Header"
 import { Link } from "react-router-dom"
 import { AiOutlineCamera } from "react-icons/ai"
 import { TfiAngleRight, TfiLocationPin } from "react-icons/tfi"
 import Button from "../components/Button"
+import SelectedFile from "../components/SelectedFile"
 
 export default function UploadNewTest(): JSX.Element {
+	const [fileSelected, setFileSelected] = useState(true)
 	return (
 		<div className="bg-white">
 			<Header />
@@ -111,12 +113,14 @@ export default function UploadNewTest(): JSX.Element {
 						<div className="my-4 flex items-center gap-3">
 							<AiOutlineCamera />
 							<label
-								htmlFor="form"
-								className="text-sm text-gray-600">
+								htmlFor="requestForm"
+								className="text-xs font-semibold text-gray-600">
 								Upload your lab request form
 							</label>
 						</div>
-						<div className="flex w-full flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4">
+						<button
+							type="button"
+							className="flex w-full flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4">
 							<img
 								src="/assets/icons/file_upload.png"
 								alt="upload file"
@@ -125,7 +129,7 @@ export default function UploadNewTest(): JSX.Element {
 								Click here to upload your lab request form
 							</p>
 							<p className="text-xs">PNG, JPG, or PDF</p>
-						</div>
+						</button>
 						{/* <input
 							type="file"
 							name="Upload Form"
@@ -135,8 +139,16 @@ export default function UploadNewTest(): JSX.Element {
 							Please upload an image or pdf file of lab tests
 						</span>
 					</div>
+					{fileSelected ? (
+						<SelectedFile
+							fileName="thisfile.png"
+							fileSize="3mb"
+							date="13 May, 2022 at 21:23"
+							handleClick={setFileSelected}
+						/>
+					) : null}
 
-					<span className="my-4 text-sm font-semibold capitalize">
+					<span className="my-4 text-xs font-semibold capitalize">
 						OR Select your lab tests here
 					</span>
 
@@ -146,7 +158,7 @@ export default function UploadNewTest(): JSX.Element {
 							alt="microscope"
 						/>
 						<div className="grow">
-							<p className="text-sm font-semibold capitalize">
+							<p className="text-xs font-semibold capitalize">
 								Select your lab test
 							</p>
 							<p className="text-xs">Sugar test, BP test &amp; 15+ tests</p>
