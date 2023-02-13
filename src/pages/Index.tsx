@@ -22,7 +22,7 @@ export default function Index(): JSX.Element {
 					text="Get Started"
 					type="button"
 					onClick={() => {
-						navigate("/upload")
+						navigate("/new-upload")
 					}}
 				/>
 			</div>
