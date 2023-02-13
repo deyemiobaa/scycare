@@ -25,7 +25,7 @@ const router = createBrowserRouter(
 				element={<TrackLabTest />}
 			/>
 			<Route
-				path="/upload"
+				path="/new-upload"
 				element={<UploadNewTest />}
 			/>
 			<Route

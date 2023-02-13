@@ -13,7 +13,7 @@ export default function UploadNewTest(): JSX.Element {
 			<Header />
 			<form
 				noValidate
-				className="px-5">
+				className="group px-5">
 				<div className="mb-5 flex items-center justify-between">
 					<h1 className="text-xl font-bold capitalize text-secondary">
 						Book new lab test
