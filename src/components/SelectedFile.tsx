@@ -3,8 +3,8 @@ import { BsArrowDownShort } from "react-icons/bs"
 import { VscTrash } from "react-icons/vsc"
 
 interface Props {
-	fileName: string
-	fileSize: string
+	fileName: string | undefined
+	fileSize: string | undefined
 	date: string
 	handleClick: (values: boolean) => void
 }

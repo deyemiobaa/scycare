@@ -1,13 +1,31 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import Header from "../components/Header"
 import { Link } from "react-router-dom"
 import { AiOutlineCamera } from "react-icons/ai"
 import { TfiAngleRight, TfiLocationPin } from "react-icons/tfi"
 import Button from "../components/Button"
 import SelectedFile from "../components/SelectedFile"
+import formatFileSize from "../lib/formatFileSize"
+import moment from "moment"
 
 export default function UploadNewTest(): JSX.Element {
-	const [fileSelected, setFileSelected] = useState(true)
+	const [fileSelected, setFileSelected] = useState(false)
+	const [file, setFile] = useState<File | null>(null)
+
+	const fileInputRef = useRef<HTMLInputElement>(null)
+
+	const openFileInput = (): void => {
+		if (fileInputRef.current != null) {
+			fileInputRef.current.click()
+		}
+	}
+
+	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+		if (e.target.files != null && e.target.files.length > 0) {
+			setFileSelected(true)
+			setFile(e.target.files[0])
+		}
+	}
 	return (
 		<div className="bg-white">
 			<Header />
@@ -120,7 +138,10 @@ export default function UploadNewTest(): JSX.Element {
 						</div>
 						<button
 							type="button"
-							className="flex w-full flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4">
+							className="flex w-full flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4"
+							onClick={() => {
+								openFileInput()
+							}}>
 							<img
 								src="/assets/icons/file_upload.png"
 								alt="upload file"
@@ -130,20 +151,24 @@ export default function UploadNewTest(): JSX.Element {
 							</p>
 							<p className="text-xs">PNG, JPG, or PDF</p>
 						</button>
-						{/* <input
+						<input
 							type="file"
 							name="Upload Form"
 							id="form"
-						/> */}
+							accept="image/png, image/jpeg, application/pdf"
+							className="hidden"
+							onChange={handleFileChange}
+							ref={fileInputRef}
+						/>
 						<span className="mt-2 hidden text-sm text-red-400">
 							Please upload an image or pdf file of lab tests
 						</span>
 					</div>
 					{fileSelected ? (
 						<SelectedFile
-							fileName="thisfile.png"
-							fileSize="3mb"
-							date="13 May, 2022 at 21:23"
+							fileName={file?.name}
+							fileSize={formatFileSize(file?.size)}
+							date={moment().format("DD MMM, YYYY [at] HH:mm")}
 							handleClick={setFileSelected}
 						/>
 					) : null}
