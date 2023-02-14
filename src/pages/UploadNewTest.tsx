@@ -5,15 +5,16 @@ import { AiOutlineCamera } from "react-icons/ai"
 import { TfiAngleRight, TfiLocationPin } from "react-icons/tfi"
 import Button from "../components/Button"
 import SelectedFile from "../components/SelectedFile"
+import DeleteModal from "../components/DeleteModal"
 import formatFileSize from "../lib/formatFileSize"
 import moment from "moment"
 
 export default function UploadNewTest(): JSX.Element {
 	const [fileSelected, setFileSelected] = useState(false)
 	const [file, setFile] = useState<File | null>(null)
+	const [showDeleteModal, setShowDeleteModal] = useState(false)
 
 	const fileInputRef = useRef<HTMLInputElement>(null)
-
 	const openFileInput = (): void => {
 		if (fileInputRef.current != null) {
 			fileInputRef.current.click()
@@ -26,6 +27,16 @@ export default function UploadNewTest(): JSX.Element {
 			setFile(e.target.files[0])
 		}
 	}
+
+	const confirmDelete = (): void => {
+		setFileSelected(false)
+		setFile(null)
+		setShowDeleteModal(false)
+	}
+	const cancelDelete = (): void => {
+		setShowDeleteModal(false)
+	}
+
 	return (
 		<div className="bg-white">
 			<Header />
@@ -169,7 +180,7 @@ export default function UploadNewTest(): JSX.Element {
 							fileName={file?.name}
 							fileSize={formatFileSize(file?.size)}
 							date={moment().format("DD MMM, YYYY [at] HH:mm")}
-							handleClick={setFileSelected}
+							handleClick={setShowDeleteModal}
 						/>
 					) : null}
 
@@ -215,6 +226,12 @@ export default function UploadNewTest(): JSX.Element {
 					/>
 				</div>
 			</form>
+			{showDeleteModal ? (
+				<DeleteModal
+					confirmDelete={confirmDelete}
+					cancelDelete={cancelDelete}
+				/>
+			) : null}
 		</div>
 	)
 }

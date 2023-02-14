@@ -39,7 +39,7 @@ export default function SelectedFile(props: Props): JSX.Element {
 					className="ml-auto"
 					title="remove file"
 					onClick={() => {
-						handleClick(false)
+						handleClick(true)
 					}}>
 					<VscTrash />
 				</button>
