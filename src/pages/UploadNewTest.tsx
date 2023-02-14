@@ -118,7 +118,7 @@ export default function UploadNewTest(): JSX.Element {
 						<select
 							className="w-full rounded border border-gray-300 bg-inherit p-3 shadow shadow-gray-100 focus:border-gray-one focus:outline-none  [&:not(:placeholder-shown):not(:focus):invalid~span]:block invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-400"
 							defaultValue="Gender"
-							aria-label="Default select example"
+							aria-label="Select Gender"
 							required>
 							<option
 								value="Gender"
