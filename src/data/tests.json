@@ -1,0 +1,70 @@
+[
+	{
+		"name": "Full Blood Count (FBC)",
+		"price": 100,
+		"description": "",
+		"requiredTests": [
+			"Hemoglobin",
+			"Hematocrit",
+			"RBC Count",
+			"MCV",
+			"MCH",
+			"MCHC",
+			"RDW",
+			"WBC Count",
+			"Neutrophils",
+			"Lymphocytes",
+			"Monocytes",
+			"Eosinophils",
+			"Basophils",
+			"Platelet Count",
+			"MPV",
+			"PDW",
+			"PCT",
+			"PD-LCR",
+			"PD-CCR"
+		]
+	},
+	{
+		"name": "Urine Complete Analysis",
+		"price": 70,
+		"description": "",
+		"requiredTests": [
+			"Colour",
+			"Appearance",
+			"Specific Gravity",
+			"pH",
+			"Protein",
+			"Glucose",
+			"Ketones",
+			"Bilirubin",
+			"Urobilinogen",
+			"Nitrite",
+			"Leukocytes",
+			"Red Blood Cells",
+			"Epithelial Cells",
+			"Casts",
+			"Crystals",
+			"Bacteria",
+			"Yeast",
+			"Trichomonas",
+			"Amorphous Urates",
+			"Amorphous Phosphates",
+			"Amorphous Oxalates",
+			"Amorphous Carbonates",
+			"Amorphous Silicates"
+		]
+	},
+	{
+		"name": "Fasting Blood Sugar (FBS)",
+		"price": 100,
+		"description": "10-12 hours of fasting required",
+		"requiredTests": []
+	},
+	{
+		"name": "Vitamin B12",
+		"price": 100,
+		"description": "",
+		"requiredTests": []
+	}
+]
