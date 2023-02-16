@@ -149,7 +149,7 @@ export default function UploadNewTest(): JSX.Element {
 						</div>
 						<button
 							type="button"
-							className="flex w-full flex-col items-center gap-3 rounded-md border-2 border-dashed border-gray-three p-4"
+							className="flex w-full flex-col items-center gap-3 rounded border-2 border-dashed border-gray-three p-4"
 							onClick={() => {
 								openFileInput()
 							}}>

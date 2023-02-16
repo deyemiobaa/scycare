@@ -13,7 +13,7 @@ interface Props {
 export default function Test(props: Props): JSX.Element {
 	const { price, name, info, icon, hasMultipleTests } = props
 	return (
-		<div className="rounded-md bg-white px-2 pt-2.5 text-[12px] leading-[22.5px] text-gray-two shadow-min">
+		<div className="rounded bg-white px-2 pt-2.5 text-[12px] leading-[22.5px] text-gray-two shadow-min">
 			<div className="flex items-start gap-3">
 				<h5 className="font-semibold">{name}</h5>
 				<span className="flex items-center gap-1.5">
@@ -22,7 +22,7 @@ export default function Test(props: Props): JSX.Element {
 				</span>
 				<button
 					type="button"
-					className="ml-auto flex items-center gap-1 rounded-md border border-secondary py-1.5 px-[7px] text-[10px] font-semibold leading-[8px] text-secondary">
+					className="ml-auto flex items-center gap-1 rounded border border-secondary py-1.5 px-[7px] text-[10px] font-semibold leading-[8px] text-secondary">
 					<BsPlus className="text-sm" />
 					<span>Add</span>
 				</button>

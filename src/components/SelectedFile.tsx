@@ -21,7 +21,7 @@ export default function SelectedFile(props: Props): JSX.Element {
 				</label>
 				<BsArrowDownShort />
 			</div>
-			<div className="flex w-full items-center gap-3 rounded-md bg-white/80 p-4 shadow-min">
+			<div className="flex w-full items-center gap-3 rounded bg-white/80 p-4 shadow-min">
 				<img
 					src="/assets/icons/file_upload.png"
 					alt="upload file"

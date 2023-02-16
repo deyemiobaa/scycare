@@ -1,4 +1,4 @@
-const formatFileSize = (size?: number): string => {
+function formatFileSize(size?: number): string {
 	if (size === undefined) {
 		return "Unknown"
 	}
